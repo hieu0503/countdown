@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Pacifico', cursive;
 }
 
 body {
-    background: #333;
+    background: #000 url(./phao-hoa-putadesign-6.png);
+    background-position: top;
+    background-repeat: repeat-x;
+    background-size: auto;
 }
 
 .container {
@@ -14,17 +19,18 @@ body {
     left: 100px;
     right: 100px;
     bottom: 80px;
-    background: #fff;
-    background-attachment: fixed;
+    /* background: url(./Logo_tròn.jpg);
+    background-attachment: fixed; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: #fff;
 }
 
 .container h2 {
     text-align: center;
-    font-size: 10em;
+    font-size: 12em;
     line-height: 0.7em;
     margin-top: -80px;
 }
@@ -33,7 +39,7 @@ body {
     display: block;
     font-weight: 300;
     letter-spacing: 6px;
-    font-size: 0.2em;
+    font-size: 0.3em;
 }
 
 .countdown {
@@ -49,10 +55,10 @@ body {
     text-align: center;
     background: #333;
     color: #fff;
-    margin: 0 15px;
-    font-size: 3em;
+    margin: 0 25px;
+    font-size: 4em;
     font-weight: 500;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
 }
 
 .countdown div:before {
@@ -62,7 +68,7 @@ body {
     left: 0;
     width: 100%;
     height: 50px;
-    background: #ff0;
+    background: rgb(253, 253, 29);
     color: rgb(3, 3, 3);
     font-size: 0.4em;
     line-height: 40px;
