@@ -3,62 +3,75 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Pacifico', cursive;
+    /* font-family: 'Pacifico', cursive; */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-body {
-    background: #000 url(./phao-hoa-putadesign-6.png);
-    background-position: top;
-    background-repeat: repeat-x;
-    background-size: auto;
-}
+/* body {
+    background: url(./phao-hoa-putadesign-6.png);
+    background-size: cover;
+} */
 
 .container {
-    position: absolute;
-    top: 80px;
-    left: 100px;
-    right: 100px;
-    bottom: 80px;
-    /* background: url(./Logo_tròn.jpg);
-    background-attachment: fixed; */
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #ff4e2b;
+    display: flex;
+}
+
+.container .imgBx {
+    position: relative;
+    width: 950px;
+    height: 100%;
+    background: url(./phao-hoa-putadesign-6.png);
+    background-size: cover;
+}
+
+.container .countdownBx {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: #fff;
+    width: calc(100% - 450px);
 }
 
-.container h2 {
+.container .countdownBx h2 {
     text-align: center;
-    font-size: 12em;
-    line-height: 0.7em;
-    margin-top: -80px;
+    font-size: 2.5em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 500;
+    line-height: 1em;
 }
 
-.container h2 span {
-    display: block;
-    font-weight: 300;
-    letter-spacing: 6px;
-    font-size: 0.3em;
+.container .countdownBx h2 span {
+    font-weight: 700;
+    font-size: 6em;
 }
 
 .countdown {
     display: flex;
     margin-top: 50px;
+    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .countdown div {
     position: relative;
     width: 100px;
-    height: 100px;
-    line-height: 100px;
     text-align: center;
-    background: #333;
     color: #fff;
     margin: 0 25px;
-    font-size: 4em;
+    margin-top: -25px;
+    font-size: 2.5em;
     font-weight: 500;
-    padding-bottom: 30px;
+    padding: 15px;
 }
 
 .countdown div:before {
@@ -70,9 +83,11 @@ body {
     height: 50px;
     background: rgb(253, 253, 29);
     color: rgb(3, 3, 3);
-    font-size: 0.4em;
+    font-size: 0.5em;
     line-height: 40px;
     font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .countdown #day:before {
@@ -89,4 +104,33 @@ body {
 
 .countdown #second:before {
     content: 'Second';
+}
+
+.countdown #second
+/* .countdown #second:before { */ {
+    color: #ff0;
+}
+
+@media (max-width: 991px) {
+    .container .imgBx {
+        display: none;
+    }
+    .container .countdownBx {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .container .countdownBx h2 {
+        font-size: 1.8em;
+    }
+    .container .countdownBx .countdown {
+        height: 100px;
+    }
+    .container .countdownBx .countdown div {
+        width: 80px;
+        font-size: 2em;
+        margin: 0;
+        margin-top: -25px;
+    }
 }
